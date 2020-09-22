@@ -51,6 +51,9 @@ merged <- rbind(train, test)
 
 colnames(merged) <- c("Labels", features[ftsids, 2])
 
+# For lowered column names
+#colnames(merged) <- c("labels", tolower(features[ftsids, 2]))
+
 ## 8) Group by activity and calculate means of all columns
 
 averages <- aggregate(merged[, -1], by=list(labels=merged$labels), mean)
