@@ -1,8 +1,8 @@
 ## 1) Download and unzip data
 
-#download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "data.zip")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "data.zip")
 
-#unzip("data.zip")
+unzip("data.zip")
 
 ## 2) Load features (columns) and activity labels.
 
@@ -49,7 +49,7 @@ rm(xTr, yTr)
 
 merged <- rbind(train, test)
 
-colnames(merged) <- c("Labels", features[ftsids, 2])
+colnames(merged) <- c("labels", features[ftsids, 2])
 
 # For lowered column names
 #colnames(merged) <- c("labels", tolower(features[ftsids, 2]))
